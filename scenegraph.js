@@ -1,8 +1,8 @@
 import * as THREE from 'three'
 import GUI from 'lil-gui'
 import { resizeRendererToDisplaySize } from './util'
-const gui = new GUI()
 export default async function main() {
+  const gui = new GUI()
   const canvas = document.getElementById('three')
   const renderer = new THREE.WebGLRenderer({ canvas })
   // 透视摄像机
