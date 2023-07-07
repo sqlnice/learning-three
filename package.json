@@ -14,7 +14,8 @@
     "three": "^0.154.0"
   },
   "devDependencies": {
-    "vite": "^4.3.9",
-    "prettier": "^2.8.8"
+    "lil-gui": "^0.18.2",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.9"
   }
 }
