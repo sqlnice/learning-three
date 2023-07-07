@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { resizeRendererToDisplaySize } from './util'
+import { resizeRendererToDisplaySize, DegRadHelper } from './util'
 import GUI from 'lil-gui'
 export default function main() {
   const canvas = document.getElementById('three')
@@ -18,6 +18,7 @@ export default function main() {
   const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
   // 加载器
   const loadingElem = document.querySelector('#loading')
+  loadingElem.style.display = 'flex'
   const progressBarElem = loadingElem.querySelector('.progressbar')
   const loadManager = new THREE.LoadingManager()
   const loader = new THREE.TextureLoader(loadManager)
@@ -96,19 +97,6 @@ export default function main() {
     requestAnimationFrame(render)
   }
   requestAnimationFrame(render)
-}
-// 提供以度数为单位进行操作的对象, 但将以弧度为单位设置属性
-class DegRadHelper {
-  constructor(obj, prop) {
-    this.obj = obj
-    this.prop = prop
-  }
-  get value() {
-    return THREE.MathUtils.radToDeg(this.obj[this.prop])
-  }
-  set value(v) {
-    this.obj[this.prop] = THREE.MathUtils.degToRad(v)
-  }
 }
 
 class StringToNumberHelper {
