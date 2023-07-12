@@ -5,6 +5,8 @@ import lights from './lights'
 import cameras from './cameras'
 import shadows from './shadows'
 import fog from './fog'
+import rendertargets from './rendertargets'
+
 // 图元
 // primitives()
 // 场景图
@@ -18,4 +20,6 @@ import fog from './fog'
 // 阴影
 // shadows()
 // 雾
-fog()
+// fog()
+// 渲染目标
+rendertargets()
