@@ -1,7 +1,13 @@
 import * as THREE from 'three'
-export function resizeRendererToDisplaySize(renderer) {
+/**
+ * 重置渲染器大小
+ * @param {*} renderer 渲染器
+ * @param {*} ignorePixelRatio 是否忽略像素比 - 摄像机例子中需要置为true
+ * @returns
+ */
+export function resizeRendererToDisplaySize(renderer, ignorePixelRatio) {
   const canvas = renderer.domElement
-  const pixelRatio = window.devicePixelRatio
+  const pixelRatio = ignorePixelRatio ? 1 : window.devicePixelRatio
   const width = (canvas.clientWidth * pixelRatio) | 0
   const height = (canvas.clientHeight * pixelRatio) | 0
   const needResize = canvas.width !== width || canvas.height !== height
