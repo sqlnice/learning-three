@@ -4,6 +4,7 @@ import textures from './textures'
 import lights from './lights'
 import cameras from './cameras'
 import shadows from './shadows'
+import fog from './fog'
 // 图元
 // primitives()
 // 场景图
@@ -15,4 +16,6 @@ import shadows from './shadows'
 // 摄像机
 // cameras()
 // 阴影
-shadows()
+// shadows()
+// 雾
+fog()
