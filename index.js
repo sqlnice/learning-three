@@ -6,6 +6,7 @@ import cameras from './cameras'
 import shadows from './shadows'
 import fog from './fog'
 import rendertargets from './rendertargets'
+import customBuffergeometry from './custom-buffergeometry'
 
 // 图元
 // primitives()
@@ -22,4 +23,6 @@ import rendertargets from './rendertargets'
 // 雾
 // fog()
 // 渲染目标
-rendertargets()
+// rendertargets()
+// 自定义buffergeometry
+customBuffergeometry()
